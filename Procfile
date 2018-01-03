@@ -1,2 +1,2 @@
-web: gunicorn tweetme.wsgi --log-file -
+web: python src/manage.py
 
