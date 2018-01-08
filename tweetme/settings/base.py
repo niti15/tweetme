@@ -20,19 +20,18 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'sq4z7av-!59rl5_0r(=clry1!z05^38wjhr)))o5k7l!%8gk4k'
+SECRET_KEY = '1iem^wu@aq5s!_4#(+#0(*(@yk0!x(tf6jet$^amu-l=(v^gun'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1:5000', 'localhost', 'tweetme-app.herokuapp.com']
 
 
 # Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
-    
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -41,13 +40,15 @@ INSTALLED_APPS = [
     'crispy_forms',
     'rest_framework',
     'accounts',
-    'tweets',
     'hashtags',
+    'tweets',
 ]
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -126,3 +127,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static-storage"),
+]
+
+STATIC_ROOT = os.path.join((BASE_DIR), "static-serve")
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
