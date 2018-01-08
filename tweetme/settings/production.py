@@ -25,7 +25,7 @@ SECRET_KEY = '1iem^wu@aq5s!_4#(+#0(*(@yk0!x(tf6jet$^amu-l=(v^gun'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1:5000', 'localhost', 'tweetme-app.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1:5000', 'localhost', 'nititweet.herokuapp.com']
 
 
 # Application definition
