@@ -383,7 +383,7 @@ function loadTweetContainer(tweetContainerID, fetchOneId){
      <title>{% block title %} Tweetme.co  {% endblock title %}</title>
 
     <!-- Bootstrap CSS -->
-    <link href="{% static 'bootstraps/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static-storage 'bootstraps/css/bootstrap.min.css' %}" rel="stylesheet">
 
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">-->
   <style type="text/css">
@@ -446,7 +446,7 @@ function loadTweetContainer(tweetContainerID, fetchOneId){
       })
 
      </script>
-    <script src="{% static 'bootstraps/js/bootstrap.min.js' %}" ></script>
+    <script src="{%  static-storage 'bootstraps/js/bootstrap.min.js' %}" ></script>
 <!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" crossorigin="anonymous"></script>
  --><!--     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" crossorigin="anonymous"></script>
  -->  </body>
