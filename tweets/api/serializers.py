@@ -62,20 +62,20 @@ class TweetModelSerializer(serializers.ModelSerializer):
       did_likes = serializers.SerializerMethodField()
       parent = ParentTweetModelSerializer(read_only=True)
       class Meta:
-    	model = Tweets
-    	fields = [
-              'id',
-             'user',
-             'content',
-             'timestamp',
-             'date_display',
-             'timesince',
-             'parent',
-             'likes',
-             'did_likes',
-             'reply',
-             'parent_id',  
-        ]	
+      	model = Tweets
+      	fields = [
+                'id',
+               'user',
+               'content',
+               'timestamp',
+               'date_display',
+               'timesince',
+               'parent',
+               'likes',
+               'did_likes',
+               'reply',
+               'parent_id',  
+          ]	
 
         # read_only_fields = ['reply']
 
